@@ -1,0 +1,12 @@
+rootProject.name = 'msa-study'
+include 'order'
+include 'order:order-domain'
+findProject(':order:order-domain')?.name = 'order-domain'
+include 'order:order-application'
+findProject(':order:order-application')?.name = 'order-application'
+include 'order:order-infrastructure'
+findProject(':order:order-infrastructure')?.name = 'order-infrastructure'
+include 'order:order-ui'
+findProject(':order:order-ui')?.name = 'order-ui'
+include 'common'
+
