@@ -8,5 +8,3 @@ include 'order:order-infrastructure'
 findProject(':order:order-infrastructure')?.name = 'order-infrastructure'
 include 'order:order-ui'
 findProject(':order:order-ui')?.name = 'order-ui'
-include 'common'
-

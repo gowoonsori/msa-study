@@ -1,19 +1,11 @@
-plugins {
-    id 'java'
-}
-
-group 'com.gowoonsori'
-version '0.0.1-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
+bootJar {enabled = false}
+jar {
+    enabled = true
+    archiveBaseName = 'order-infra'
+    archiveFileName = 'order-infra.jar'
+    archiveVersion = '1'
+} //jar 파일로 생성되어 다른 프로젝트에 첨부
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
-
-test {
-    useJUnitPlatform()
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
